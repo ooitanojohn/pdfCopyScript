@@ -1,8 +1,19 @@
 # pdfを読み取ってtxtファイルにページごとに分割,多少整形
 
+
+
+https://user-images.githubusercontent.com/71388489/167423466-10089e44-5f25-4aac-a392-d55289eae6cf.mp4
+
+
 ## 完成品 dist/format.sh
+
 - bash format.sh PDFファイル名.pdfで実行
 
+## 足りないもの
+- ディレクトリ作成はgrepでリンク一覧だしてmkdir touch で手動でやっている
+- 行頭の数字を消したい
+- ファイル名をファイルから読み込んで変更したい 現在は splittxt{*}
+- mkdir touch 時に splitしたデータを | でくっつける
 
 # 作業手順
 
