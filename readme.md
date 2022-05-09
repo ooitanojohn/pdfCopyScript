@@ -1,6 +1,9 @@
 # pdfを読み取ってtxtファイルにページごとに分割,多少整形
 
 
+https://user-images.githubusercontent.com/71388489/167424795-a3e5cfad-8377-4546-aab6-0bf860b1c149.mp4
+
+
 
 https://user-images.githubusercontent.com/71388489/167423466-10089e44-5f25-4aac-a392-d55289eae6cf.mp4
 
