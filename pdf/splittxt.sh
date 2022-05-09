@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-csplit -z -f splittxt $1 '/^Printed: 2022/*/' '{*}'
+csplit -z -f split/splittxt $1 '/^Printed: 2022/*/' '{*}'
