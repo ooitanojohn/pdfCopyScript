@@ -1,6 +1,9 @@
 # pdfを読み取ってtxtファイルにページごとに分割,多少整形
 
-https://user-images.githubusercontent.com/71388489/167423466-10089e44-5f25-4aac-a392-d55289eae6cf.mp4
+
+https://user-images.githubusercontent.com/71388489/167428027-d7f8dc1a-2143-4ee5-8443-83447c97fa01.mp4
+
+
 
 
 ## 完成品 dist/format.sh
