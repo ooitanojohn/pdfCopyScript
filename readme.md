@@ -3,9 +3,9 @@
 
 https://user-images.githubusercontent.com/71388489/167428027-d7f8dc1a-2143-4ee5-8443-83447c97fa01.mp4
 
-
-
-
+## 05/10追記 dist/asciiFormat.rb
+- 完成品をアスキーアート化した
+- ruby
 ## 完成品 dist/format.sh
 
 - bash format.sh PDFファイル名.pdfで実行
