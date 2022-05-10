@@ -5,7 +5,8 @@ https://user-images.githubusercontent.com/71388489/167428027-d7f8dc1a-2143-4ee5-
 
 ## 05/10追記 dist/asciiFormat.rb
 - 完成品をアスキーアート化した
-- ruby
+- rubyからbash呼び出しで実行
+![image](https://user-images.githubusercontent.com/71388489/167636523-903163b3-20d0-449a-bb07-861958bd0772.png)
 ## 完成品 dist/format.sh
 
 - bash format.sh PDFファイル名.pdfで実行
