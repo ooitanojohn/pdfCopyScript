@@ -1,5 +1,9 @@
 # pdfを読み取ってtxtファイルにページごとに分割,多少整形
 
+## 完成品 dist/format.sh
+
+- bash format.sh PDFファイル名.pdfで実行
+- 
 ## 5/20追記
 - [×]全共通部分のファイル自動作成 ph35/scottadmin
 - [×]オプションで個別呼び出し
@@ -28,10 +32,6 @@
 - dist/rubyにアスキーアート化するプログラム
 - 完成品をアスキーアート化した
 ![image](https://user-images.githubusercontent.com/71388489/167638472-fe0c8928-1f89-41dd-8b48-d2caea664b27.png)
-
-## 完成品 dist/format.sh
-https://user-images.githubusercontent.com/71388489/167428027-d7f8dc1a-2143-4ee5-8443-83447c97fa01.mp4
-- bash format.sh PDFファイル名.pdfで実行
 
 
 # 作業手順
