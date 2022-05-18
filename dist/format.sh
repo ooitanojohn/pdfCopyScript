@@ -46,7 +46,6 @@ done
 grep "フォルダ=/" split/* >mkdir.txt
 
 sed -i -e "s/split\///g" mkdir.txt
-
 cat mkdir.txt | while read line
 do
   mkdir "${line##*フォルダ=/}"
