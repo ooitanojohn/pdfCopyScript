@@ -1,11 +1,14 @@
 mkdir ph35/
 mkdir ph35/scottadmin
 
-grep "フォルダ=/" split/split**.txt >mkdir.txt
+grep "フォルダ=/" split/* >mkdir.txt
+
+sed -i -e "s/split\///g" mkdir.txt
 
 cat mkdir.txt | while read line
 do
   mkdir "${line##*フォルダ=/}"
+  mv split/${line%%:*} ${line##*フォルダ=/}${line%%:*}
 done
 
 

@@ -1,13 +1,10 @@
 # pdfを読み取ってtxtファイルにページごとに分割,多少整形
 
-
-<<<<<<< HEAD
-https://user-images.githubusercontent.com/71388489/167428027-d7f8dc1a-2143-4ee5-8443-83447c97fa01.mp4
-
 ## 足りないもの
 - ディレクトリ作成
   - grepの結果を格納してmkdirの変数に渡す
 - 行頭の数字を消したい
+  - readlineで3行目から読み込み
 - ファイル名をファイルから読み込んで変更したい 現在は split[00~**].txt
 - 検索結果に出て来ない、ファイル名がついていないものをcatで前のファイルと合体
 - ディレクトリ移動
@@ -18,20 +15,16 @@ https://user-images.githubusercontent.com/71388489/167428027-d7f8dc1a-2143-4ee5-
 - grepした結果を配列に格納しようとすると同階層のファイル名も格納されている
 - 検索処理を格納している？
 - grepの-o でファイル名=正規表現で抜き出せないか | 末尾の要素を取り出して変数に代入
--
-=======
->>>>>>> 6c9747f1622d53cb5ccd344c249ef6ac2131d7e0
+- readlineで読み込んだときにコメントの*をエスケープする方法?? → ""で囲んでいなかった
+- grep結果は加工せずに新規ファイルに出力したほうが楽> file
 ## 05/10追記 dist/asciiFormat.rb
 - アスキーアート化して実行可能な上記プログラム
 - rubyからbash呼び出しで実行 (dist/format.rb)
 - dist/rubyにアスキーアート化するプログラム
 - 完成品をアスキーアート化した
-<<<<<<< HEAD
 ![image](https://user-images.githubusercontent.com/71388489/167636523-903163b3-20d0-449a-bb07-861958bd0772.png)
 ## dist/format.sh
-=======
 ![image](https://user-images.githubusercontent.com/71388489/167638472-fe0c8928-1f89-41dd-8b48-d2caea664b27.png)
->>>>>>> 6c9747f1622d53cb5ccd344c249ef6ac2131d7e0
 
 ## 完成品 dist/format.sh
 https://user-images.githubusercontent.com/71388489/167428027-d7f8dc1a-2143-4ee5-8443-83447c97fa01.mp4

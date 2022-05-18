@@ -1,23 +1,17 @@
+mkdir ph35/
+mkdir ph35/scottadmin
 
-mkdir phpdb
-mkdir phpdb/chap{01..04}
+grep "フォルダ=/" split/split**.txt >mkdir.txt
 
-touch phpdb/index.html
-touch phpdb/chap01/connectToDB.php
-touch phpdb/chap01/failedToConnect.php
-touch phpdb/chap01/failedToConnectWithTryCatch.php
-touch phpdb/chap02/insertData.php
-touch phpdb/chap02/updateData.php
-touch phpdb/chap02/deleteData.php
-touch phpdb/chap03/findManyRecords.php
-touch phpdb/chap03/findOneRecords.php
-touch phpdb/chap03/findWithLike.php
+cat mkdir.txt | while read line
+do
+  mkdir "${line##*フォルダ=/}"
+done
 
-mkdir phpdb/chap04/findone && touch phpdb/chap04/findone/Order.php
-touch phpdb/chap04/findone/findOneWithEntity.php
-mkdir phpdb/chap04/findmany && touch phpdb/chap04/findmany/Order.php
-touch phpdb/chap04/findmany/findManyWithEntity.php
 
-# 実行
-# 実行階層 xampp/htdogs/ph35/mkdir.sh
-# 実行コマンド
+# 1 文字列 grep繰り返し
+# folders=`grep "フォルダ=/" split/split01.txt`
+# echo ${folders##*フォルダ=/}
+
+# 2 配列
+# folders=($(grep "フォルダ=/" split/split**.txt))
