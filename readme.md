@@ -1,13 +1,16 @@
 # pdfを読み取ってtxtファイルにページごとに分割,多少整形
 
+## 5/20追記
+- [x]全共通部分のファイル自動作成 ph35/scottadmin
 ## 足りないもの
-- ディレクトリ作成
-  - grepの結果を格納してmkdirの変数に渡す
-- 行頭の数字を消したい
+- [o]ディレクトリ作成
+  - [o]grepの結果を格納してmkdirの変数に渡す
+- [o]行頭の数字を消したい
   - readlineで3行目から読み込み
-- ファイル名をファイルから読み込んで変更したい 現在は split[00~**].txt
-- 検索結果に出て来ない、ファイル名がついていないものをcatで前のファイルと合体
-- ディレクトリ移動
+- [o]ファイル名をファイルから読み込んで変更したい 現在は split[00~**].txt
+- [o]検索結果に出て来ない、ファイル名がついていないものをcatで前のファイルと合体
+  - ゼロ埋め[https://genzouw.com/entry/2019/03/06/080354/1087/]
+- [o]ディレクトリ移動
 ## 5/17追記
 - csplit[https://linuxcommand.net/csplit/#_-b]
 - コマンド結果代入[https://it-ojisan.tokyo/grep-array/]
@@ -22,8 +25,6 @@
 - rubyからbash呼び出しで実行 (dist/format.rb)
 - dist/rubyにアスキーアート化するプログラム
 - 完成品をアスキーアート化した
-![image](https://user-images.githubusercontent.com/71388489/167636523-903163b3-20d0-449a-bb07-861958bd0772.png)
-## dist/format.sh
 ![image](https://user-images.githubusercontent.com/71388489/167638472-fe0c8928-1f89-41dd-8b48-d2caea664b27.png)
 
 ## 完成品 dist/format.sh

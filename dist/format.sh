@@ -3,7 +3,7 @@
 pdftotext -layout -nopgbrk $1 format.txt
 # 行末変換
 sed -i -e "s/¬//g" format.txt
-# 行頭の数字削除
+# 行頭の数字削除 (dist.sh)
 rm dist.txt
 cat format.txt | while read line
 do
@@ -19,20 +19,30 @@ csplit -s -z -f split/split -b '%02u.txt' dist.txt '/^nted: 2022/*/' '{*}'
 sed -i -e "1d" split/split*.txt
 sed -i -e '$d' split/split*.txt
 
-# ファイル開始時にコメントがないファイルは
+# ファイル開始時にコメントがないファイルは (cat.sh)
 # ひとつ上の数字のファイルと結合
-grep "フォルダ=/" split/split**.txt >mkdir.txt
-cat mkdir.txt | while read line
+# bash url[https://qiita.com/akinomyoga/items/9761031c551d43307374]
+grep -L "ファイル名=" split/split**.txt >cat.txt
+# 10進数 [https://kazmax.zpp.jp/cmd/e/expr.1.html#ah_4]
+cat cat.txt | while read line
 do
-  mkdir "${line##*フォルダ=/}"
+  num=${line:11:-4}
+  num=`expr $num - 1`
+  if [ $num -gt 0 ] ; then
+    num=$(printf "%02d" $num)
+    cat $line >>split/split$num.txt
+    rm $line
+  fi
 done
-# ファイルrename
-grep "ファイル名=" split/split**.txt > rename.txt
+
+# ファイルrename (rename.sh)
+grep "ファイル名=" split/*.txt > rename.txt
 cat rename.txt | while read line
 do
   mv ${line%%:*} ${line%%/*}/${line##*ファイル名=}
 done
-#フォルダ一覧作成 [共通部分を手動で作る必要がある為その部分を取得して自動作成したい、重複をifで実行しないようにしたい] && 移動
+
+#フォルダ一覧作成 [共通部分を手動で作る必要がある為その部分を取得して自動作成したい、重複をifで実行しないようにしたい] && 移動 (mkdir.sh)
 grep "フォルダ=/" split/* >mkdir.txt
 
 sed -i -e "s/split\///g" mkdir.txt
