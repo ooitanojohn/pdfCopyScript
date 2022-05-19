@@ -22,7 +22,10 @@ sed -i -e '$d' split/split*.txt
 # ファイル開始時にコメントがないファイルは (cat.sh)
 # ひとつ上の数字のファイルと結合
 # bash url[https://qiita.com/akinomyoga/items/9761031c551d43307374]
-grep -L "ファイル名=" split/split**.txt >cat.txt
+declare file="ファイル名="
+declare folder="ディレクトリ="
+
+grep -L $file split/split**.txt >cat.txt
 # 10進数 [https://kazmax.zpp.jp/cmd/e/expr.1.html#ah_4]
 cat cat.txt | while read line
 do
@@ -36,19 +39,19 @@ do
 done
 
 # ファイルrename (rename.sh)
-grep "ファイル名=" split/*.txt > rename.txt
+grep $file split/*.txt > rename.txt
 cat rename.txt | while read line
 do
-  mv ${line%%:*} ${line%%/*}/${line##*ファイル名=}
+  mv ${line%%:*} ${line%%/*}/${line##*$file}
 done
 
 #フォルダ一覧作成 [共通部分を手動で作る必要がある為その部分を取得して自動作成したい、重複をifで実行しないようにしたい] && 移動 (mkdir.sh)
-grep "フォルダ=/" split/* >mkdir.txt
+grep $folder split/* >mkdir.txt
 
 sed -i -e "s/split\///g" mkdir.txt
 cat mkdir.txt | while read line
 do
-  mkdir "${line##*フォルダ=/}"
-  mv split/${line%%:*} ${line##*フォルダ=/}${line%%:*}
+  mkdir "${line##*folder/}"
+  mv split/${line%%:*} ${line##*$folder/}${line%%:*}
 done
 
