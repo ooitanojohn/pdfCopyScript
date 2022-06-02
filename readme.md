@@ -3,10 +3,27 @@
 ## 完成品 dist/format.sh
 
 - bash format.sh PDFファイル名.pdfで実行
--
+## 作業手順
+dir 作成
+シェルスクリプトで考える
+pdfにまとめてディレクトリが記述されている
+
+mkdirとtouch
+mkdirは被っているとエラー
+
+pdf を textファイルに pdfTranceTxt.sh
+コンソールでtextファイルに変換する
+apt install poppler-utils
+pdftotext -layout -nopgbrk "PDFファイル"
+
+ailasに登録
+
+行末文字を変換 txtformat.sh
+ページごとに分割 splittxt.sh
+ディレクトリ作成 grep Src split/*
+でディレクトリの行一覧検索
 ## 5/20追記
-- [×]全共通部分のファイル自動作成 ph35/scottadmin
-- [×]オプションで個別呼び出し
+- [x]全共通部分のファイル自動作成 ph35/scottadmin
 
 ## 参考リンク
 - 配列 [https://qiita.com/b4b4r07/items/e56a8e3471fb45df2f59]
