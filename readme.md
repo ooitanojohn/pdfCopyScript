@@ -23,7 +23,7 @@ ailasに登録
 ディレクトリ作成 grep Src split/*
 でディレクトリの行一覧検索
 ## 5/20追記
-- [×]全共通部分のファイル自動作成 ph35/scottadmin
+- [x]全共通部分のファイル自動作成 ph35/scottadmin
 
 ## 参考リンク
 - 配列 [https://qiita.com/b4b4r07/items/e56a8e3471fb45df2f59]
