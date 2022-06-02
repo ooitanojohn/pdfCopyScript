@@ -1,16 +1,3 @@
-#!/usr/bin/env bash
-# pdf→txtに
-pdftotext -layout -nopgbrk $1 format.txt
-# 行末変換
-sed -i -e "s/¬//g" format.txt
-# 行頭の数字削除 (dist.sh)
-rm dist.txt
-cat format.txt | while read line
-do
-  echo "${line:3}" >> dist.txt
-done
-rm format.txt
-# ファイル分割
 rm -rf split
 mkdir split
 # -s 出力時コンソール出さない url[https://linuxcommand.net/csplit/#_-s]
@@ -51,4 +38,3 @@ do
   mkdir "${line##*フォルダ=/}"
   mv split/${line%%:*} ${line##*フォルダ=/}${line%%:*}
 done
-
