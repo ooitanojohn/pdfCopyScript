@@ -37,5 +37,6 @@ ailasに登録
 - 10進数 [https://kazmax.zpp.jp/cmd/e/expr.1.html#ah_4]
 - ゼロ埋め [https://genzouw.com/entry/2019/03/06/080354/1087/]
 
-
+## 分割ファイル
+- [dist/](dist/)
 
