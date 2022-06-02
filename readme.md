@@ -1,8 +1,8 @@
 # pdfを読み取ってtxtファイルにページごとに分割,多少整形
 
-## 完成品 dist/format.sh
-
+## 完成品 format.sh
 - bash format.sh PDFファイル名.pdfで実行
+## [実行動画 youtubeに移行](https://youtu.be/0qND7G4qoLI)
 ## 作業手順
 dir 作成
 シェルスクリプトで考える
